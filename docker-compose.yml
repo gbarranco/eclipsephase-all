@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  nginx:
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+      args:
+        DOCKER_UID: ${DOCKER_UID} # replace by your user id
+        DOCKER_GID: ${DOCKER_GID} # replace by your group id
+    ports:
+      - 80:80
+    links:
+      - php-fpm
+      #- mariadb
+    volumes:
+      - ./docker/nginx/build_vhost.sh:/build_vhost.sh
+      - ./docker/nginx/etc/nginx/conf.d/eclipse-phase.template:/etc/nginx/conf.d/eclipse-phase.template
+      - ./src:/var/www/html
+    env_file:
+      - ./.env
+    environment:
+      - FPM_HOST=php-fpm
+      - FPM_PORT=9000
+      - NGINX_HTTP_PORT=80
+      - SERVERNAME=eclipse-phase.docker
+      - UPLOAD_MAX_FILESIZE=64M
+    command: /bin/bash -c "sh /build_vhost.sh"
+
+  php-fpm:
+    build:
+      context: ./docker/fpm
+      dockerfile: Dockerfile
+      args:
+        DOCKER_UID: ${DOCKER_UID} # replace by your user id
+        DOCKER_GID: ${DOCKER_GID} # replace by your group id
+    volumes:
+      - ./src:/var/www/html
+    env_file:
+      - ./.env
