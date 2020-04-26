@@ -38,3 +38,16 @@ services:
       - ./src:/var/www/html
     env_file:
       - ./.env
+
+  symfony-install:
+    build:
+      context: ./docker/cli
+      dockerfile: Dockerfile-install
+      args:
+        DOCKER_UID: ${DOCKER_UID}
+        DOCKER_GID: ${DOCKER_GID}
+    volumes:
+      - ./src:/var/www/html
+    env_file:
+      - ./.env
+    working_dir: /var/www/html
