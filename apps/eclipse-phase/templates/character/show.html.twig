@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Character{% endblock %}
+
+{% block body %}
+    <h1>Character</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ character.id }}</td>
+            </tr>
+            <tr>
+                <th>CharacterName</th>
+                <td>{{ character.characterName }}</td>
+            </tr>
+            <tr>
+                <th>Background</th>
+                <td>{{ character.background }}</td>
+            </tr>
+            <tr>
+                <th>Faction</th>
+                <td>{{ character.faction }}</td>
+            </tr>
+            <tr>
+                <th>SexualIdentity</th>
+                <td>{{ character.sexualIdentity }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ character.age }}</td>
+            </tr>
+            <tr>
+                <th>AudacityPoints</th>
+                <td>{{ character.audacityPoints }}</td>
+            </tr>
+            <tr>
+                <th>Xp</th>
+                <td>{{ character.xp }}</td>
+            </tr>
+            <tr>
+                <th>ARep</th>
+                <td>{{ character.aRep }}</td>
+            </tr>
+            <tr>
+                <th>GRep</th>
+                <td>{{ character.gRep }}</td>
+            </tr>
+            <tr>
+                <th>CRep</th>
+                <td>{{ character.cRep }}</td>
+            </tr>
+            <tr>
+                <th>IRep</th>
+                <td>{{ character.iRep }}</td>
+            </tr>
+            <tr>
+                <th>ERep</th>
+                <td>{{ character.eRep }}</td>
+            </tr>
+            <tr>
+                <th>RRep</th>
+                <td>{{ character.rRep }}</td>
+            </tr>
+            <tr>
+                <th>FRep</th>
+                <td>{{ character.fRep }}</td>
+            </tr>
+            <tr>
+                <th>Attributes</th>
+                <td>{{ character.attributes }}</td>
+            </tr>
+            <tr>
+                <th>IdInfos</th>
+                <td>{{ character.idInfos }}</td>
+            </tr>
+            <tr>
+                <th>PsiPasses</th>
+                <td>{{ character.psiPasses }}</td>
+            </tr>
+            <tr>
+                <th>Notes</th>
+                <td>{{ character.notes }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('character_index') }}">back to list</a>
+
+    <a href="{{ path('character_edit', {'id': character.id}) }}">edit</a>
+
+    {{ include('character/_delete_form.html.twig') }}
+{% endblock %}

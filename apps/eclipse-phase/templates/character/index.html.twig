@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Character index{% endblock %}
+
+{% block body %}
+    <h1>Character index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>CharacterName</th>
+                <th>Background</th>
+                <th>Faction</th>
+                <th>SexualIdentity</th>
+                <th>Age</th>
+                <th>AudacityPoints</th>
+                <th>Xp</th>
+                <th>ARep</th>
+                <th>GRep</th>
+                <th>CRep</th>
+                <th>IRep</th>
+                <th>ERep</th>
+                <th>RRep</th>
+                <th>FRep</th>
+                <th>Attributes</th>
+                <th>IdInfos</th>
+                <th>PsiPasses</th>
+                <th>Notes</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for character in characters %}
+            <tr>
+                <td>{{ character.id }}</td>
+                <td>{{ character.characterName }}</td>
+                <td>{{ character.background }}</td>
+                <td>{{ character.faction }}</td>
+                <td>{{ character.sexualIdentity }}</td>
+                <td>{{ character.age }}</td>
+                <td>{{ character.audacityPoints }}</td>
+                <td>{{ character.xp }}</td>
+                <td>{{ character.aRep }}</td>
+                <td>{{ character.gRep }}</td>
+                <td>{{ character.cRep }}</td>
+                <td>{{ character.iRep }}</td>
+                <td>{{ character.eRep }}</td>
+                <td>{{ character.rRep }}</td>
+                <td>{{ character.fRep }}</td>
+                <td>{{ character.attributes }}</td>
+                <td>{{ character.idInfos }}</td>
+                <td>{{ character.psiPasses }}</td>
+                <td>{{ character.notes }}</td>
+                <td>
+                    <a href="{{ path('character_show', {'id': character.id}) }}">show</a>
+                    <a href="{{ path('character_edit', {'id': character.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="20">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('character_new') }}">Create new</a>
+{% endblock %}

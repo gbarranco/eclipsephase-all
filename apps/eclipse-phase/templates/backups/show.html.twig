@@ -1,0 +1,686 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Backups{% endblock %}
+
+{% block body %}
+    <h1>Backups</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ backup.id }}</td>
+            </tr>
+            <tr>
+                <th>BackupDate</th>
+                <td>{{ backup.backupDate ? backup.backupDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>BaseCog</th>
+                <td>{{ backup.baseCog }}</td>
+            </tr>
+            <tr>
+                <th>BaseCoo</th>
+                <td>{{ backup.baseCoo }}</td>
+            </tr>
+            <tr>
+                <th>BaseInt</th>
+                <td>{{ backup.baseInt }}</td>
+            </tr>
+            <tr>
+                <th>BaseRef</th>
+                <td>{{ backup.baseRef }}</td>
+            </tr>
+            <tr>
+                <th>BaseAst</th>
+                <td>{{ backup.baseAst }}</td>
+            </tr>
+            <tr>
+                <th>BaseSom</th>
+                <td>{{ backup.baseSom }}</td>
+            </tr>
+            <tr>
+                <th>BaseVol</th>
+                <td>{{ backup.baseVol }}</td>
+            </tr>
+            <tr>
+                <th>BonusCog</th>
+                <td>{{ backup.bonusCog }}</td>
+            </tr>
+            <tr>
+                <th>BonusCoo</th>
+                <td>{{ backup.bonusCoo }}</td>
+            </tr>
+            <tr>
+                <th>BonusInt</th>
+                <td>{{ backup.bonusInt }}</td>
+            </tr>
+            <tr>
+                <th>BonusRef</th>
+                <td>{{ backup.bonusRef }}</td>
+            </tr>
+            <tr>
+                <th>BonusAst</th>
+                <td>{{ backup.bonusAst }}</td>
+            </tr>
+            <tr>
+                <th>BonusSom</th>
+                <td>{{ backup.bonusSom }}</td>
+            </tr>
+            <tr>
+                <th>BonusVol</th>
+                <td>{{ backup.bonusVol }}</td>
+            </tr>
+            <tr>
+                <th>Audacity</th>
+                <td>{{ backup.audacity }}</td>
+            </tr>
+            <tr>
+                <th>Stress</th>
+                <td>{{ backup.stress }}</td>
+            </tr>
+            <tr>
+                <th>Trauma</th>
+                <td>{{ backup.trauma }}</td>
+            </tr>
+            <tr>
+                <th>TraumaText</th>
+                <td>{{ backup.traumaText }}</td>
+            </tr>
+            <tr>
+                <th>BaseDispersalWeapons</th>
+                <td>{{ backup.baseDispersalWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusDispersalWeapons</th>
+                <td>{{ backup.bonusDispersalWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseExoticRifles</th>
+                <td>{{ backup.baseExoticRifles }}</td>
+            </tr>
+            <tr>
+                <th>BonusExoticRifles</th>
+                <td>{{ backup.bonusExoticRifles }}</td>
+            </tr>
+            <tr>
+                <th>BaseGuidedWeapons</th>
+                <td>{{ backup.baseGuidedWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusGuidedWeapons</th>
+                <td>{{ backup.bonusGuidedWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseRayWeapons</th>
+                <td>{{ backup.baseRayWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusRayWeapons</th>
+                <td>{{ backup.bonusRayWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseKineticWeapons</th>
+                <td>{{ backup.baseKineticWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusKineticWeapons</th>
+                <td>{{ backup.bonusKineticWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseJetWeapons</th>
+                <td>{{ backup.baseJetWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusJetWeapons</th>
+                <td>{{ backup.bonusJetWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseBluntWeapons</th>
+                <td>{{ backup.baseBluntWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusBluntWeapons</th>
+                <td>{{ backup.bonusBluntWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseMeleeWeapons</th>
+                <td>{{ backup.baseMeleeWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusMeleeWeapons</th>
+                <td>{{ backup.bonusMeleeWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseEdgedWeapons</th>
+                <td>{{ backup.baseEdgedWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusEdgedWeapons</th>
+                <td>{{ backup.bonusEdgedWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseNonArmedFight</th>
+                <td>{{ backup.baseNonArmedFight }}</td>
+            </tr>
+            <tr>
+                <th>BonusNonArmedFight</th>
+                <td>{{ backup.bonusNonArmedFight }}</td>
+            </tr>
+            <tr>
+                <th>BaseMountedWeapons</th>
+                <td>{{ backup.baseMountedWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BonusMountedWeapons</th>
+                <td>{{ backup.bonusMountedWeapons }}</td>
+            </tr>
+            <tr>
+                <th>BaseEvasion</th>
+                <td>{{ backup.baseEvasion }}</td>
+            </tr>
+            <tr>
+                <th>BonusEvasion</th>
+                <td>{{ backup.bonusEvasion }}</td>
+            </tr>
+            <tr>
+                <th>BaseFreeFall</th>
+                <td>{{ backup.baseFreeFall }}</td>
+            </tr>
+            <tr>
+                <th>BonusFreeFall</th>
+                <td>{{ backup.bonusFreeFall }}</td>
+            </tr>
+            <tr>
+                <th>BaseDisguise</th>
+                <td>{{ backup.baseDisguise }}</td>
+            </tr>
+            <tr>
+                <th>BonusDisguise</th>
+                <td>{{ backup.bonusDisguise }}</td>
+            </tr>
+            <tr>
+                <th>BaseRobbery</th>
+                <td>{{ backup.baseRobbery }}</td>
+            </tr>
+            <tr>
+                <th>BonusRobbery</th>
+                <td>{{ backup.bonusRobbery }}</td>
+            </tr>
+            <tr>
+                <th>BaseInfiltration</th>
+                <td>{{ backup.baseInfiltration }}</td>
+            </tr>
+            <tr>
+                <th>BonusInfiltration</th>
+                <td>{{ backup.bonusInfiltration }}</td>
+            </tr>
+            <tr>
+                <th>BaseClimbing</th>
+                <td>{{ backup.baseClimbing }}</td>
+            </tr>
+            <tr>
+                <th>BonusClimbing</th>
+                <td>{{ backup.bonusClimbing }}</td>
+            </tr>
+            <tr>
+                <th>BaseSwimming</th>
+                <td>{{ backup.baseSwimming }}</td>
+            </tr>
+            <tr>
+                <th>BonusSwimming</th>
+                <td>{{ backup.bonusSwimming }}</td>
+            </tr>
+            <tr>
+                <th>BaseParkour</th>
+                <td>{{ backup.baseParkour }}</td>
+            </tr>
+            <tr>
+                <th>BonusParkour</th>
+                <td>{{ backup.bonusParkour }}</td>
+            </tr>
+            <tr>
+                <th>BaseFlight</th>
+                <td>{{ backup.baseFlight }}</td>
+            </tr>
+            <tr>
+                <th>BonusFlight</th>
+                <td>{{ backup.bonusFlight }}</td>
+            </tr>
+            <tr>
+                <th>BaseDemolition</th>
+                <td>{{ backup.baseDemolition }}</td>
+            </tr>
+            <tr>
+                <th>BonusDemolition</th>
+                <td>{{ backup.bonusDemolition }}</td>
+            </tr>
+            <tr>
+                <th>BaseInfosec</th>
+                <td>{{ backup.baseInfosec }}</td>
+            </tr>
+            <tr>
+                <th>BonusInfosec</th>
+                <td>{{ backup.bonusInfosec }}</td>
+            </tr>
+            <tr>
+                <th>BaseInterface</th>
+                <td>{{ backup.baseInterface }}</td>
+            </tr>
+            <tr>
+                <th>BonusInterface</th>
+                <td>{{ backup.bonusInterface }}</td>
+            </tr>
+            <tr>
+                <th>BaseEquipment1</th>
+                <td>{{ backup.baseEquipment1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusEquipment1</th>
+                <td>{{ backup.bonusEquipment1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseEquipment2</th>
+                <td>{{ backup.baseEquipment2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusEquipment2</th>
+                <td>{{ backup.bonusEquipment2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseEquipment3</th>
+                <td>{{ backup.baseEquipment3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusEquipment3</th>
+                <td>{{ backup.bonusEquipment3 }}</td>
+            </tr>
+            <tr>
+                <th>BaseMedicine1</th>
+                <td>{{ backup.baseMedicine1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusMedicine1</th>
+                <td>{{ backup.bonusMedicine1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseMedicine2</th>
+                <td>{{ backup.baseMedicine2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusMedicine2</th>
+                <td>{{ backup.bonusMedicine2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseProgramming</th>
+                <td>{{ backup.baseProgramming }}</td>
+            </tr>
+            <tr>
+                <th>BonusProgramming</th>
+                <td>{{ backup.bonusProgramming }}</td>
+            </tr>
+            <tr>
+                <th>BaseSearch</th>
+                <td>{{ backup.baseSearch }}</td>
+            </tr>
+            <tr>
+                <th>BonusSearch</th>
+                <td>{{ backup.bonusSearch }}</td>
+            </tr>
+            <tr>
+                <th>BasePsychoSurgery</th>
+                <td>{{ backup.basePsychoSurgery }}</td>
+            </tr>
+            <tr>
+                <th>BonusPsychoSurgery</th>
+                <td>{{ backup.bonusPsychoSurgery }}</td>
+            </tr>
+            <tr>
+                <th>BaseExcavation</th>
+                <td>{{ backup.baseExcavation }}</td>
+            </tr>
+            <tr>
+                <th>BonusExcavation</th>
+                <td>{{ backup.bonusExcavation }}</td>
+            </tr>
+            <tr>
+                <th>BaseInvestigation</th>
+                <td>{{ backup.baseInvestigation }}</td>
+            </tr>
+            <tr>
+                <th>BonusInvestigation</th>
+                <td>{{ backup.bonusInvestigation }}</td>
+            </tr>
+            <tr>
+                <th>BaseNavigation</th>
+                <td>{{ backup.baseNavigation }}</td>
+            </tr>
+            <tr>
+                <th>BonusNavigation</th>
+                <td>{{ backup.bonusNavigation }}</td>
+            </tr>
+            <tr>
+                <th>BasePerception</th>
+                <td>{{ backup.basePerception }}</td>
+            </tr>
+            <tr>
+                <th>BonusPerception</th>
+                <td>{{ backup.bonusPerception }}</td>
+            </tr>
+            <tr>
+                <th>BasePsiAssault</th>
+                <td>{{ backup.basePsiAssault }}</td>
+            </tr>
+            <tr>
+                <th>BonusPsiAssault</th>
+                <td>{{ backup.bonusPsiAssault }}</td>
+            </tr>
+            <tr>
+                <th>BaseControl</th>
+                <td>{{ backup.baseControl }}</td>
+            </tr>
+            <tr>
+                <th>BonusControl</th>
+                <td>{{ backup.bonusControl }}</td>
+            </tr>
+            <tr>
+                <th>BaseSensation</th>
+                <td>{{ backup.baseSensation }}</td>
+            </tr>
+            <tr>
+                <th>BonusSensation</th>
+                <td>{{ backup.bonusSensation }}</td>
+            </tr>
+            <tr>
+                <th>BaseAnimalControl</th>
+                <td>{{ backup.baseAnimalControl }}</td>
+            </tr>
+            <tr>
+                <th>BonusAnimalControl</th>
+                <td>{{ backup.bonusAnimalControl }}</td>
+            </tr>
+            <tr>
+                <th>BaseImposture</th>
+                <td>{{ backup.baseImposture }}</td>
+            </tr>
+            <tr>
+                <th>BonusImposture</th>
+                <td>{{ backup.bonusImposture }}</td>
+            </tr>
+            <tr>
+                <th>BaseIntimidation</th>
+                <td>{{ backup.baseIntimidation }}</td>
+            </tr>
+            <tr>
+                <th>BonusIntimidation</th>
+                <td>{{ backup.bonusIntimidation }}</td>
+            </tr>
+            <tr>
+                <th>BaseKinesics</th>
+                <td>{{ backup.baseKinesics }}</td>
+            </tr>
+            <tr>
+                <th>BonusKinesics</th>
+                <td>{{ backup.bonusKinesics }}</td>
+            </tr>
+            <tr>
+                <th>BasePersuasion</th>
+                <td>{{ backup.basePersuasion }}</td>
+            </tr>
+            <tr>
+                <th>BonusPersuasion</th>
+                <td>{{ backup.bonusPersuasion }}</td>
+            </tr>
+            <tr>
+                <th>BaseProtocol</th>
+                <td>{{ backup.baseProtocol }}</td>
+            </tr>
+            <tr>
+                <th>BonusProtocol</th>
+                <td>{{ backup.bonusProtocol }}</td>
+            </tr>
+            <tr>
+                <th>BaseNetwork1</th>
+                <td>{{ backup.baseNetwork1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusNetwork1</th>
+                <td>{{ backup.bonusNetwork1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseNetwork2</th>
+                <td>{{ backup.baseNetwork2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusNetwork2</th>
+                <td>{{ backup.bonusNetwork2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseNetwork3</th>
+                <td>{{ backup.baseNetwork3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusNetwork3</th>
+                <td>{{ backup.bonusNetwork3 }}</td>
+            </tr>
+            <tr>
+                <th>BaseNetwork4</th>
+                <td>{{ backup.baseNetwork4 }}</td>
+            </tr>
+            <tr>
+                <th>BonusNetwork4</th>
+                <td>{{ backup.bonusNetwork4 }}</td>
+            </tr>
+            <tr>
+                <th>BaseSubterfuge</th>
+                <td>{{ backup.baseSubterfuge }}</td>
+            </tr>
+            <tr>
+                <th>BonusSubterfuge</th>
+                <td>{{ backup.bonusSubterfuge }}</td>
+            </tr>
+            <tr>
+                <th>BasePiloting1</th>
+                <td>{{ backup.basePiloting1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusPiloting1</th>
+                <td>{{ backup.bonusPiloting1 }}</td>
+            </tr>
+            <tr>
+                <th>BasePiloting2</th>
+                <td>{{ backup.basePiloting2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusPiloting2</th>
+                <td>{{ backup.bonusPiloting2 }}</td>
+            </tr>
+            <tr>
+                <th>BasePiloting3</th>
+                <td>{{ backup.basePiloting3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusPiloting3</th>
+                <td>{{ backup.bonusPiloting3 }}</td>
+            </tr>
+            <tr>
+                <th>BasePiloting4</th>
+                <td>{{ backup.basePiloting4 }}</td>
+            </tr>
+            <tr>
+                <th>BonusPiloting4</th>
+                <td>{{ backup.bonusPiloting4 }}</td>
+            </tr>
+            <tr>
+                <th>BaseArt1</th>
+                <td>{{ backup.baseArt1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusArt1</th>
+                <td>{{ backup.bonusArt1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseArt2</th>
+                <td>{{ backup.baseArt2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusArt2</th>
+                <td>{{ backup.bonusArt2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseArt3</th>
+                <td>{{ backup.baseArt3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusArt3</th>
+                <td>{{ backup.bonusArt3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusArt4</th>
+                <td>{{ backup.bonusArt4 }}</td>
+            </tr>
+            <tr>
+                <th>BaseArt4</th>
+                <td>{{ backup.baseArt4 }}</td>
+            </tr>
+            <tr>
+                <th>BaseInterest1</th>
+                <td>{{ backup.baseInterest1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusInterest1</th>
+                <td>{{ backup.bonusInterest1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseInterest2</th>
+                <td>{{ backup.baseInterest2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusInterest2</th>
+                <td>{{ backup.bonusInterest2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseInterest3</th>
+                <td>{{ backup.baseInterest3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusInterest3</th>
+                <td>{{ backup.bonusInterest3 }}</td>
+            </tr>
+            <tr>
+                <th>BaseInterest4</th>
+                <td>{{ backup.baseInterest4 }}</td>
+            </tr>
+            <tr>
+                <th>BaseNativeLanguage</th>
+                <td>{{ backup.baseNativeLanguage }}</td>
+            </tr>
+            <tr>
+                <th>BonusNativeLanguage</th>
+                <td>{{ backup.bonusNativeLanguage }}</td>
+            </tr>
+            <tr>
+                <th>BaseLanguage1</th>
+                <td>{{ backup.baseLanguage1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusLanguage1</th>
+                <td>{{ backup.bonusLanguage1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseLanguage2</th>
+                <td>{{ backup.baseLanguage2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusLanguage2</th>
+                <td>{{ backup.bonusLanguage2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseLanguage3</th>
+                <td>{{ backup.baseLanguage3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusLanguage3</th>
+                <td>{{ backup.bonusLanguage3 }}</td>
+            </tr>
+            <tr>
+                <th>BaseLanguage4</th>
+                <td>{{ backup.baseLanguage4 }}</td>
+            </tr>
+            <tr>
+                <th>BonusLanguage4</th>
+                <td>{{ backup.bonusLanguage4 }}</td>
+            </tr>
+            <tr>
+                <th>BaseProfession1</th>
+                <td>{{ backup.baseProfession1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusProfession1</th>
+                <td>{{ backup.bonusProfession1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseProfession2</th>
+                <td>{{ backup.baseProfession2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusProfession2</th>
+                <td>{{ backup.bonusProfession2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseProfession3</th>
+                <td>{{ backup.baseProfession3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusProfession3</th>
+                <td>{{ backup.bonusProfession3 }}</td>
+            </tr>
+            <tr>
+                <th>BaseProfession4</th>
+                <td>{{ backup.baseProfession4 }}</td>
+            </tr>
+            <tr>
+                <th>BonusProfession4</th>
+                <td>{{ backup.bonusProfession4 }}</td>
+            </tr>
+            <tr>
+                <th>BaseTheory1</th>
+                <td>{{ backup.baseTheory1 }}</td>
+            </tr>
+            <tr>
+                <th>BonusTheory1</th>
+                <td>{{ backup.bonusTheory1 }}</td>
+            </tr>
+            <tr>
+                <th>BaseTheory2</th>
+                <td>{{ backup.baseTheory2 }}</td>
+            </tr>
+            <tr>
+                <th>BonusTheory2</th>
+                <td>{{ backup.bonusTheory2 }}</td>
+            </tr>
+            <tr>
+                <th>BaseTheory3</th>
+                <td>{{ backup.baseTheory3 }}</td>
+            </tr>
+            <tr>
+                <th>BonusTheory3</th>
+                <td>{{ backup.bonusTheory3 }}</td>
+            </tr>
+            <tr>
+                <th>BaseTheory4</th>
+                <td>{{ backup.baseTheory4 }}</td>
+            </tr>
+            <tr>
+                <th>BonusTheory4</th>
+                <td>{{ backup.bonusTheory4 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('backups_index') }}">back to list</a>
+
+    <a href="{{ path('backups_edit', {'id': backup.id}) }}">edit</a>
+
+    {{ include('backups/_delete_form.html.twig') }}
+{% endblock %}
