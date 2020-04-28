@@ -10,6 +10,7 @@
             <tr>
                 <th>{% trans %}Backup date{%  endtrans %}</th>
                 <th>{% trans %}Backup character{% endtrans %}</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('backups_new') }}">Create new</a>
+    <a href="{{ path('backups_new') }}" class="action-button">Create new</a>
 {% endblock %}

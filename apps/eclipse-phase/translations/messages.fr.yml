@@ -1,3 +1,23 @@
+# Global
+show: Voir
+edit: Modifier
+back to list: Retour à la liste
+
+# Player
+Player: Joueur
+Players: Joueurs
+No player found: Aucun joueur trouvé
+Create new player: Créer un nouveau joueur
+New player: Nouveau joueur
+Player name: Nom du joueur
+Edit Player: Modifier un joueur
+Update: Mettre à jour
+
+# Characters
+Character: Personnage
+Characters: Personnages
+
+# Backups
 Backups: Sauvegardes
 Backup date: Date de sauvegarde
 Backup character: Personnage sauvegardé

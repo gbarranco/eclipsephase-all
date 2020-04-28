@@ -1,35 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Player index{% endblock %}
+{% block title %}{% trans %}Player{% endtrans %}{% endblock %}
 
 {% block body %}
-    <h1>Player index</h1>
+    <h1>{% trans %}Player{% endtrans %}</h1>
 
-    <table class="table">
-        <thead>
+    <table class="table table-hover table-striped table-dark">
+        <thead class="thead-dark">
             <tr>
-                <th>Id</th>
-                <th>PlayerName</th>
-                <th>actions</th>
+                <th scope="col">{% trans %}Player name{% endtrans %}</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for player in players %}
             <tr>
-                <td>{{ player.id }}</td>
                 <td>{{ player.playerName }}</td>
                 <td>
-                    <a href="{{ path('player_show', {'id': player.id}) }}">show</a>
-                    <a href="{{ path('player_edit', {'id': player.id}) }}">edit</a>
+                    <a href="{{ path('player_show', {'id': player.id}) }}">
+                        <i title="{% trans %}show{% endtrans %}" class="far fa-eye"></i></a>
+                    <a href="{{ path('player_edit', {'id': player.id}) }}">
+                        <i title="{% trans %}edit{% endtrans %}" class="far fa-edit"></i>
+                    </a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">{% trans %}No player found{% endtrans %}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('player_new') }}">Create new</a>
+    <a href="{{ path('player_new') }}" class="btn btn-primary btn-lg">{% trans %}Create new player{% endtrans %}</a>
 {% endblock %}
