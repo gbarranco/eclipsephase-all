@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Character;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,7 +16,14 @@ class CharacterType extends AbstractType
             ->add('characterName')
             ->add('background')
             ->add('faction')
-            ->add('sexualIdentity')
+            ->add('sexualIdentity', ChoiceType::class,[
+                'choices' => [
+                    'Homme' => 'Homme',
+                    'Femme' => 'Femme',
+                    'Intersexué' => 'Intersexué',
+                    'Neutre' => 'Neutre'
+                ]
+            ])
             ->add('age')
             ->add('audacityPoints')
             ->add('xp')

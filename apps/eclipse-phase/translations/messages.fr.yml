@@ -2,6 +2,7 @@
 show: Voir
 edit: Modifier
 back to list: Retour à la liste
+Delete: Supprimer
 
 # Player
 Player: Joueur
@@ -16,6 +17,17 @@ Update: Mettre à jour
 # Characters
 Character: Personnage
 Characters: Personnages
+Character name: Nom du personnage
+No character found: Aucun personnage trouvé
+Create new character: Créer un nouveau personnage
+Edit Character: Modifier un personnage
+Background: Historique
+Sexual identity: Identité sexuelle
+Age: Âge
+Audacity points: Points d'audace
+Xp: Points d'expérience
+Attributes: Aspects positifs et négatifs
+Psi passes: Passes psi
 
 # Backups
 Backups: Sauvegardes

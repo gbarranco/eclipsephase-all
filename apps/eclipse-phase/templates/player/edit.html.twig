@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% trans %}Edit Player{% endtrans %}{% endblock %}
+{% block title %}{% trans %}Edit Player{% endtrans %} : {{ player.playerName }}{% endblock %}
 
 {% block body %}
-    <h1>{% trans %}Edit Player{% endtrans %}</h1>
+    <h1>{% trans %}Edit Player{% endtrans %} : {{ player.playerName }}</h1>
 
-    {{ include('player/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('player/_form.html.twig') }}
 
     <div class="back">
         <a href="{{ path('player_index') }}">
