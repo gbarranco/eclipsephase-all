@@ -1,26 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Player{% endblock %}
+{% block title %}{% trans %}Player{% endtrans %} : {{ player.playerName }}{% endblock %}
 
 {% block body %}
-    <h1>Player</h1>
+    <h1>{% trans %}Player{% endtrans %} : {{ player.playerName }}</h1>
 
-    <table class="table">
+    <table class="table table-hover table-striped table-dark">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ player.id }}</td>
-            </tr>
-            <tr>
-                <th>PlayerName</th>
+                <th scope="row">{% trans %}Player name{% endtrans %}</th>
                 <td>{{ player.playerName }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('player_index') }}">back to list</a>
-
-    <a href="{{ path('player_edit', {'id': player.id}) }}">edit</a>
+    <div class="back">
+        <a href="{{ path('player_index') }}">
+            <i class="fas fa-angle-double-left">
+                {% trans %}back to list{% endtrans %}
+            </i>
+        </a>
+    </div>
 
     {{ include('player/_delete_form.html.twig') }}
 {% endblock %}

@@ -9,6 +9,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes:
+      - ./docker/volumes/mysql/database:/var/lib/mysql
   nginx:
     image: nginx:1.15.3-alpine
     restart: on-failure

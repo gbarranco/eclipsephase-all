@@ -110,6 +110,11 @@ class Character
     private ?string $notes = null;
 
     /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private ?string $motivations = null;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Player", inversedBy="characters")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -342,6 +347,18 @@ class Character
     public function setNotes(?string $notes): self
     {
         $this->notes = $notes;
+
+        return $this;
+    }
+
+    public function getMotivations(): ?string
+    {
+        return $this->motivations;
+    }
+
+    public function setMotivations(?string $motivations): self
+    {
+        $this->motivations = $motivations;
 
         return $this;
     }
