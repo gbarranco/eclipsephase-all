@@ -59,26 +59,6 @@ class BackupsController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="backups_edit", methods={"GET","POST"})
-     */
-    public function edit(Request $request, Backups $backup): Response
-    {
-        $form = $this->createForm(BackupsType::class, $backup);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('backups_index');
-        }
-
-        return $this->render('backups/edit.html.twig', [
-            'backup' => $backup,
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
      * @Route("/{id}", name="backups_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Backups $backup): Response

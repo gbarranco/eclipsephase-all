@@ -23,9 +23,9 @@ class Backups
     private ?Character $playableCharacter = null;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="string")
      */
-    private ?\DateTime $backupDate = null;
+    private ?string $backupDate = null;
 
     /**
      * @ORM\Column(type="integer")
@@ -101,6 +101,11 @@ class Backups
      * @ORM\Column(type="integer")
      */
     private int $audacity = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private int $speed = 0;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -725,6 +730,11 @@ class Backups
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
+    private ?int $bonusInterest4 = null;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
     private ?int $baseNativeLanguage = null;
 
     /**
@@ -869,12 +879,12 @@ class Backups
         return $this;
     }
 
-    public function getBackupDate(): ?\DateTimeInterface
+    public function getBackupDate(): ?string
     {
         return $this->backupDate;
     }
 
-    public function setBackupDate(\DateTimeInterface $backupDate): self
+    public function setBackupDate(string $backupDate): self
     {
         $this->backupDate = $backupDate;
 
@@ -1057,6 +1067,18 @@ class Backups
     public function setAudacity(int $audacity): self
     {
         $this->audacity = $audacity;
+
+        return $this;
+    }
+
+    public function getSpeed(): ?int
+    {
+        return $this->speed;
+    }
+
+    public function setSpeed(int $speed): self
+    {
+        $this->speed = $speed;
 
         return $this;
     }
@@ -2549,6 +2571,18 @@ class Backups
         return $this;
     }
 
+    public function getBonusInterest4(): ?int
+    {
+        return $this->bonusInterest4;
+    }
+
+    public function setBOnusInterest4(?int $bonusInterest4): self
+    {
+        $this->bonusInterest4 = $bonusInterest4;
+
+        return $this;
+    }
+
     public function getBaseNativeLanguage(): ?int
     {
         return $this->baseNativeLanguage;
@@ -2886,5 +2920,11 @@ class Backups
         $int = $this->getBaseInt() + $this->getBonusInt();
         $ref = $this->getBaseRef() + $this->getBonusRef();
         return round(($int + $ref) / 5, 0, PHP_ROUND_HALF_UP);
+    }
+
+    public function getBd(): int
+    {
+        $som = $this->getBaseSom() + $this->getBonusSom();
+        return round($som / 10, 0, PHP_ROUND_HALF_UP);
     }
 }

@@ -1,69 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Character index{% endblock %}
+{% block title %}{% trans %}Characters{% endtrans %}{% endblock %}
 
 {% block body %}
-    <h1>Character index</h1>
+    <h1>{% trans %}Characters{% endtrans %}</h1>
 
-    <table class="table">
-        <thead>
+    <table class="table table-hover table-striped table-dark">
+        <thead class="thead-dark">
             <tr>
-                <th>Id</th>
-                <th>CharacterName</th>
-                <th>Background</th>
-                <th>Faction</th>
-                <th>SexualIdentity</th>
-                <th>Age</th>
-                <th>AudacityPoints</th>
-                <th>Xp</th>
-                <th>ARep</th>
-                <th>GRep</th>
-                <th>CRep</th>
-                <th>IRep</th>
-                <th>ERep</th>
-                <th>RRep</th>
-                <th>FRep</th>
-                <th>Attributes</th>
-                <th>IdInfos</th>
-                <th>PsiPasses</th>
-                <th>Notes</th>
-                <th>actions</th>
+                <th scope="col">{% trans %}Character name{% endtrans %}</th>
+                <th scope="col">{% trans %}Player name{% endtrans %}</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for character in characters %}
             <tr>
-                <td>{{ character.id }}</td>
                 <td>{{ character.characterName }}</td>
-                <td>{{ character.background }}</td>
-                <td>{{ character.faction }}</td>
-                <td>{{ character.sexualIdentity }}</td>
-                <td>{{ character.age }}</td>
-                <td>{{ character.audacityPoints }}</td>
-                <td>{{ character.xp }}</td>
-                <td>{{ character.aRep }}</td>
-                <td>{{ character.gRep }}</td>
-                <td>{{ character.cRep }}</td>
-                <td>{{ character.iRep }}</td>
-                <td>{{ character.eRep }}</td>
-                <td>{{ character.rRep }}</td>
-                <td>{{ character.fRep }}</td>
-                <td>{{ character.attributes }}</td>
-                <td>{{ character.idInfos }}</td>
-                <td>{{ character.psiPasses }}</td>
-                <td>{{ character.notes }}</td>
+                <td>{{ character.player }}</td>
                 <td>
-                    <a href="{{ path('character_show', {'id': character.id}) }}">show</a>
-                    <a href="{{ path('character_edit', {'id': character.id}) }}">edit</a>
+                    <a href="{{ path('character_show', {'id': character.id}) }}">
+                        <i title="{% trans %}show{% endtrans %}" class="far fa-eye"></i>
+                    </a>
+                    <a href="{{ path('character_edit', {'id': character.id}) }}">
+                        <i title="{% trans %}edit{% endtrans %}" class="far fa-edit"></i>
+                    </a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="20">no records found</td>
+                <td colspan="3">{% trans %}No character found{% endtrans %}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('character_new') }}">Create new</a>
+    <a href="{{ path('character_new') }}" class="btn btn-primary btn-lg">{% trans %}Create new character{% endtrans %}</a>
 {% endblock %}
