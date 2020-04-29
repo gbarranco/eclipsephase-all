@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Character;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -27,6 +28,7 @@ class CharacterType extends AbstractType
             ->add('age')
             ->add('audacityPoints')
             ->add('xp')
+            ->add('motivations')
             ->add('aRep')
             ->add('gRep')
             ->add('cRep')

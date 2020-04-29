@@ -72,3 +72,11 @@ div.back a i:before {
     margin-bottom: 0;
 }
 
+caption {
+    caption-side: top;
+    font-size: 16pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
