@@ -80,3 +80,21 @@ caption {
     color: white;
 }
 
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e6d3ca;
+}
+
+.table,
+.table > th,
+.table > td {
+    background-color: #f3dfd6;
+    color: #800000;
+}
+
+.table-light tbody + tbody, .table-light td, .table-light th, .table-light thead th {
+    border-color: #f3dfd6;
+}
+
+.table .thead-dark th {
+    background-color: #800000;
+}

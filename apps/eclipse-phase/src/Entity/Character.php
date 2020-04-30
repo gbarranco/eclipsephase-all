@@ -200,7 +200,7 @@ class Character
         return $this->audacityPoints;
     }
 
-    public function setAudacityPoints(?int $audacityPoints): self
+    public function setAudacityPoints(int $audacityPoints): self
     {
         $this->audacityPoints = $audacityPoints;
 

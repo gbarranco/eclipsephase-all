@@ -1,0 +1,9 @@
+apps/
+!apps/eclipse-phase
+bin/
+docker/
+.env
+.env.dist
+.gitignore
+docker-compose.yml
+Makefile
