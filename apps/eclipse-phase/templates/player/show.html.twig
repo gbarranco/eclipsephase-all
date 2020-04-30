@@ -11,6 +11,14 @@
                 <th scope="row">{% trans %}Player name{% endtrans %}</th>
                 <td>{{ player.playerName }}</td>
             </tr>
+            <tr>
+                <th scope="row">{% trans %}Role{% endtrans %}</th>
+                {% if 'ROLE_MJ' == player.roles %}
+                    <td>MJ</td>
+                {% elseif 'ROLE_PJ' == player.roles %}
+                    <td>PJ</td>
+                {% endif %}
+            </tr>
         </tbody>
     </table>
 

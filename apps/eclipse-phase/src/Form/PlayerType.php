@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Player;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,6 +14,12 @@ class PlayerType extends AbstractType
     {
         $builder
             ->add('playerName')
+            ->add('roles', ChoiceType::class, [
+                'choices' => [
+                    'PJ' => 'ROLE_PJ',
+                    'MJ' => 'ROLE_MJ'
+                ]
+            ])
         ;
     }
 
