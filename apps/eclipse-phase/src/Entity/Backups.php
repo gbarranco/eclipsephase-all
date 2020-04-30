@@ -14,853 +14,853 @@ class Backups
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private int $id;
+    private $id;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Character", inversedBy="backups")
      * @ORM\JoinColumn(nullable=false)
      */
-    private ?Character $playableCharacter = null;
+    private $playableCharacter = null;
 
     /**
      * @ORM\Column(type="string")
      */
-    private ?string $backupDate = null;
+    private $backupDate = null;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $baseCog = 0;
+    private $baseCog = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $baseCoo = 0;
+    private $baseCoo = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $baseInt = 0;
+    private $baseInt = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $baseRef = 0;
+    private $baseRef = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $baseAst = 0;
+    private $baseAst = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $baseSom = 0;
+    private $baseSom = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $baseVol = 0;
+    private $baseVol = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $bonusCog = 0;
+    private $bonusCog = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $bonusCoo = 0;
+    private $bonusCoo = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $bonusInt = 0;
+    private $bonusInt = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $bonusRef = 0;
+    private $bonusRef = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $bonusAst = 0;
+    private $bonusAst = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $bonusSom = 0;
+    private $bonusSom = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $bonusVol = 0;
+    private $bonusVol = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $audacity = 0;
+    private $audacity = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $speed = 0;
+    private $speed = 0;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $stress = null;
+    private  $stress = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $trauma = null;
+    private  $trauma = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private ?string $traumaText = null;
+    private $traumaText = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseDispersalWeapons = null;
+    private  $baseDispersalWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusDispersalWeapons = null;
+    private  $bonusDispersalWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseExoticRifles = null;
+    private  $baseExoticRifles = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusExoticRifles = null;
+    private  $bonusExoticRifles = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseGuidedWeapons = null;
+    private  $baseGuidedWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusGuidedWeapons = null;
+    private  $bonusGuidedWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseRayWeapons = null;
+    private  $baseRayWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusRayWeapons = null;
+    private  $bonusRayWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseKineticWeapons = null;
+    private  $baseKineticWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusKineticWeapons = null;
+    private  $bonusKineticWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseJetWeapons = null;
+    private  $baseJetWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusJetWeapons = null;
+    private  $bonusJetWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseBluntWeapons = null;
+    private  $baseBluntWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusBluntWeapons = null;
+    private  $bonusBluntWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseMeleeWeapons = null;
+    private  $baseMeleeWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusMeleeWeapons = null;
+    private  $bonusMeleeWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseEdgedWeapons = null;
+    private  $baseEdgedWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusEdgedWeapons = null;
+    private  $bonusEdgedWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseNonArmedFight = null;
+    private  $baseNonArmedFight = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusNonArmedFight = null;
+    private  $bonusNonArmedFight = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseMountedWeapons = null;
+    private  $baseMountedWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusMountedWeapons = null;
+    private  $bonusMountedWeapons = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseEvasion = null;
+    private  $baseEvasion = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusEvasion = null;
+    private  $bonusEvasion = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseFreeFall = null;
+    private  $baseFreeFall = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusFreeFall = null;
+    private  $bonusFreeFall = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseDisguise = null;
+    private  $baseDisguise = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusDisguise = null;
+    private  $bonusDisguise = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseRobbery = null;
+    private  $baseRobbery = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusRobbery = null;
+    private  $bonusRobbery = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInfiltration = null;
+    private  $baseInfiltration = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInfiltration = null;
+    private  $bonusInfiltration = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseClimbing = null;
+    private  $baseClimbing = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusClimbing = null;
+    private  $bonusClimbing = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseSwimming = null;
+    private  $baseSwimming = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusSwimming = null;
+    private  $bonusSwimming = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseParkour = null;
+    private  $baseParkour = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusParkour = null;
+    private  $bonusParkour = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseFlight = null;
+    private  $baseFlight = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusFlight = null;
+    private  $bonusFlight = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseDemolition = null;
+    private  $baseDemolition = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusDemolition = null;
+    private  $bonusDemolition = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInfosec = null;
+    private  $baseInfosec = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInfosec = null;
+    private  $bonusInfosec = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInterface = null;
+    private  $baseInterface = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInterface = null;
+    private  $bonusInterface = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseEquipment1 = null;
+    private  $baseEquipment1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusEquipment1 = null;
+    private  $bonusEquipment1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseEquipment2 = null;
+    private  $baseEquipment2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusEquipment2 = null;
+    private  $bonusEquipment2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseEquipment3 = null;
+    private  $baseEquipment3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusEquipment3 = null;
+    private  $bonusEquipment3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseMedicine1 = null;
+    private  $baseMedicine1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusMedicine1 = null;
+    private  $bonusMedicine1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseMedicine2 = null;
+    private  $baseMedicine2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusMedicine2 = null;
+    private  $bonusMedicine2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseProgramming = null;
+    private  $baseProgramming = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusProgramming = null;
+    private  $bonusProgramming = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseSearch = null;
+    private  $baseSearch = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusSearch = null;
+    private  $bonusSearch = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePsychoSurgery = null;
+    private  $basePsychoSurgery = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPsychoSurgery = null;
+    private  $bonusPsychoSurgery = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseExcavation = null;
+    private  $baseExcavation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusExcavation = null;
+    private  $bonusExcavation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInvestigation = null;
+    private  $baseInvestigation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInvestigation = null;
+    private  $bonusInvestigation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseNavigation = null;
+    private  $baseNavigation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusNavigation = null;
+    private  $bonusNavigation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePerception = null;
+    private  $basePerception = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPerception = null;
+    private  $bonusPerception = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePsiAssault = null;
+    private  $basePsiAssault = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPsiAssault = null;
+    private  $bonusPsiAssault = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseControl = null;
+    private  $baseControl = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusControl = null;
+    private  $bonusControl = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseSensation = null;
+    private  $baseSensation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusSensation = null;
+    private  $bonusSensation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseAnimalControl = null;
+    private  $baseAnimalControl = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusAnimalControl = null;
+    private  $bonusAnimalControl = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseImposture = null;
+    private  $baseImposture = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusImposture = null;
+    private  $bonusImposture = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseIntimidation = null;
+    private  $baseIntimidation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusIntimidation = null;
+    private  $bonusIntimidation = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseKinesics = null;
+    private  $baseKinesics = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusKinesics = null;
+    private  $bonusKinesics = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePersuasion = null;
+    private  $basePersuasion = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPersuasion = null;
+    private  $bonusPersuasion = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseProtocol = null;
+    private  $baseProtocol = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusProtocol = null;
+    private  $bonusProtocol = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseNetwork1 = null;
+    private  $baseNetwork1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusNetwork1 = null;
+    private  $bonusNetwork1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseNetwork2 = null;
+    private  $baseNetwork2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusNetwork2 = null;
+    private  $bonusNetwork2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseNetwork3 = null;
+    private  $baseNetwork3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusNetwork3 = null;
+    private  $bonusNetwork3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseNetwork4 = null;
+    private  $baseNetwork4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusNetwork4 = null;
+    private  $bonusNetwork4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseSubterfuge = null;
+    private  $baseSubterfuge = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusSubterfuge = null;
+    private  $bonusSubterfuge = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePiloting1 = null;
+    private  $basePiloting1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPiloting1 = null;
+    private  $bonusPiloting1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePiloting2 = null;
+    private  $basePiloting2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPiloting2 = null;
+    private  $bonusPiloting2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePiloting3 = null;
+    private  $basePiloting3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPiloting3 = null;
+    private  $bonusPiloting3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $basePiloting4 = null;
+    private  $basePiloting4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusPiloting4 = null;
+    private  $bonusPiloting4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseArt1 = null;
+    private  $baseArt1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusArt1 = null;
+    private  $bonusArt1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseArt2 = null;
+    private  $baseArt2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusArt2 = null;
+    private  $bonusArt2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseArt3 = null;
+    private  $baseArt3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusArt3 = null;
+    private  $bonusArt3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusArt4 = null;
+    private  $bonusArt4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseArt4 = null;
+    private  $baseArt4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInterest1 = null;
+    private  $baseInterest1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInterest1 = null;
+    private  $bonusInterest1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInterest2 = null;
+    private  $baseInterest2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInterest2 = null;
+    private  $bonusInterest2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInterest3 = null;
+    private  $baseInterest3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInterest3 = null;
+    private  $bonusInterest3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseInterest4 = null;
+    private  $baseInterest4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusInterest4 = null;
+    private  $bonusInterest4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseNativeLanguage = null;
+    private  $baseNativeLanguage = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusNativeLanguage = null;
+    private  $bonusNativeLanguage = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseLanguage1 = null;
+    private  $baseLanguage1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusLanguage1 = null;
+    private  $bonusLanguage1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseLanguage2 = null;
+    private  $baseLanguage2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusLanguage2 = null;
+    private  $bonusLanguage2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseLanguage3 = null;
+    private  $baseLanguage3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusLanguage3 = null;
+    private  $bonusLanguage3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseLanguage4 = null;
+    private  $baseLanguage4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusLanguage4 = null;
+    private  $bonusLanguage4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseProfession1 = null;
+    private  $baseProfession1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusProfession1 = null;
+    private  $bonusProfession1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseProfession2 = null;
+    private  $baseProfession2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusProfession2 = null;
+    private  $bonusProfession2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseProfession3 = null;
+    private  $baseProfession3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusProfession3 = null;
+    private  $bonusProfession3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseProfession4 = null;
+    private  $baseProfession4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusProfession4 = null;
+    private  $bonusProfession4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseTheory1 = null;
+    private  $baseTheory1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusTheory1 = null;
+    private  $bonusTheory1 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseTheory2 = null;
+    private  $baseTheory2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusTheory2 = null;
+    private  $bonusTheory2 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseTheory3 = null;
+    private  $baseTheory3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusTheory3 = null;
+    private  $bonusTheory3 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $baseTheory4 = null;
+    private  $baseTheory4 = null;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $bonusTheory4 = null;
+    private  $bonusTheory4 = null;
 
     public function getId(): ?int
     {

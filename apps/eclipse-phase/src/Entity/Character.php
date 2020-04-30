@@ -17,113 +17,113 @@ class Character
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private int $id;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private string $characterName = "";
+    private $characterName = "";
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private ?string $background = null;
+    private $background = null;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private ?string $faction = null;
+    private $faction = null;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private string $sexualIdentity = "";
+    private $sexualIdentity = "";
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private ?int $age = 0;
+    private $age = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $audacityPoints = 0;
+    private $audacityPoints = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $xp = 0;
+    private $xp = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $aRep = 0;
+    private $aRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $gRep = 0;
+    private $gRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $cRep = 0;
+    private $cRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $iRep = 0;
+    private $iRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $eRep = 0;
+    private $eRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $rRep = 0;
+    private $rRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private int $fRep = 0;
+    private $fRep = 0;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private ?string $attributes = null;
+    private $attributes = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private ?string $idInfos = null;
+    private $idInfos = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private ?string $psiPasses = null;
+    private $psiPasses = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private ?string $notes = null;
+    private $notes = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private ?string $motivations = null;
+    private $motivations = null;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Player", inversedBy="characters")
      * @ORM\JoinColumn(nullable=false)
      */
-    private ?Player $Player = null;
+    private $Player = null;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Backups", mappedBy="playableCharacter", orphanRemoval=true)
      */
-    private Collection $backups;
+    private $backups;
 
     public function __construct()
     {
