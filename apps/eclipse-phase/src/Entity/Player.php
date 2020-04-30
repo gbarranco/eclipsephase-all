@@ -16,17 +16,17 @@ class Player
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $playerName = "";
+    private string $playerName = "";
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Character", mappedBy="Player", orphanRemoval=true)
      */
-    private $characters;
+    private Collection $characters;
 
     public function __construct()
     {

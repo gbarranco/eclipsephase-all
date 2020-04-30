@@ -17,113 +17,113 @@ class Character
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $characterName = "";
+    private string $characterName = "";
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $background = null;
+    private ?string $background = null;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $faction = null;
+    private ?string $faction = null;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $sexualIdentity = "";
+    private string $sexualIdentity = "";
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $age = 0;
+    private ?int $age = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $audacityPoints = 0;
+    private int $audacityPoints = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $xp = 0;
+    private int $xp = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $aRep = 0;
+    private int $aRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $gRep = 0;
+    private int $gRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $cRep = 0;
+    private int $cRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $iRep = 0;
+    private int $iRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $eRep = 0;
+    private int $eRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $rRep = 0;
+    private int $rRep = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $fRep = 0;
+    private int $fRep = 0;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $attributes = null;
+    private ?string $attributes = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $idInfos = null;
+    private ?string $idInfos = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $psiPasses = null;
+    private ?string $psiPasses = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $notes = null;
+    private ?string $notes = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $motivations = null;
+    private ?string $motivations = null;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Player", inversedBy="characters")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $Player = null;
+    private ?Player $Player = null;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Backups", mappedBy="playableCharacter", orphanRemoval=true)
      */
-    private $backups;
+    private Collection $backups;
 
     public function __construct()
     {
@@ -200,7 +200,7 @@ class Character
         return $this->audacityPoints;
     }
 
-    public function setAudacityPoints(?int $audacityPoints): self
+    public function setAudacityPoints(int $audacityPoints): self
     {
         $this->audacityPoints = $audacityPoints;
 
