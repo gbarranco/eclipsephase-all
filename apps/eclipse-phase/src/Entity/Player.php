@@ -5,28 +5,34 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PlayerRepository")
  */
-class Player
+class Player implements UserInterface
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private int $id;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private string $playerName = "";
+    private $playerName = "";
+
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = "";
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Character", mappedBy="Player", orphanRemoval=true)
      */
-    private Collection $characters;
+    private $characters;
 
     public function __construct()
     {
@@ -81,8 +87,39 @@ class Player
         return $this;
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->getPlayerName();
+    }
+
+    public function getRoles(): ?string
+    {
+        return $this->roles;
+    }
+
+    public function setRoles(string $roles): self
+    {
+        $this->roles = $roles;
+        return $this;
+    }
+
+    public function getPassword()
+    {
+        // TODO: Implement getPassword() method.
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    public function getUsername(): string
+    {
+        return $this->playerName;
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 }
